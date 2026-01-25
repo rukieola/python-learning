@@ -17,3 +17,8 @@ print(family)
 '''
 for key in family:
     print(f"{key}: {family[key]}")
+
+for key in family.keys():
+    print(key)
+for values in family.values():
+    print(values)
