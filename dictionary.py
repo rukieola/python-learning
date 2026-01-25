@@ -6,6 +6,7 @@ family = {
     "second_child": "dagunro",
     "last_born": "iya gbonkan"
 }
+'''
 family["third_child"] = "raji arowolo"
 print(family["father_name"])
 family["last_born"] = "omije oju mii"
@@ -13,3 +14,6 @@ print(family["last_born"])
 print(family)
 family.pop("mother_name")
 print(family)
+'''
+for key in family:
+    print(f"{key}: {family[key]}")
