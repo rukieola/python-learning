@@ -51,7 +51,7 @@ def consonant_count(my_word):
         print(f"we have {count} consonants in your provided sentence")
 
 
-def vowels_count(my_word):
+def vowels_count(my_word:str):
     count =  0
     for char in my_word:
         vowels = "aeiou"
