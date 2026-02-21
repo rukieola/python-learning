@@ -79,27 +79,31 @@ class Book:
     
     def remove_books(self,book_names:list):
         for item in book_names:
-            self.books.remove(item)
+            if item in self.books:
+                self.books.remove(item)
+            else:
+                print(f"book {item} not in list")
     
-    def update_books(self, book_names:list):
-        query=input("Are you adding or removing book? ")
+    def update_books(self, query, book_names:list):
         if query =="add":
-            self.books.append(book_names)
-            print(f"{book_names} has been added to the list")
+            self.add_books(book_names)
             self.book_update()
         else:
-            self.books.remove(book_names)
-            print(f"{book_names} has been removed from the list ")
+            self.remove_books(book_names)
             self.book_update()
             
-
+'''
 library=Book()
+
 library.add_book("alaroye")
 library.add_book("tales by moonlight")
 library.add_book("joy")
 library.add_book("jigawa")
 library.remove_book("jigawa")
 
-
+query=input("Are you adding or removing book? ")
+list_of_books=["jaja","joy", "opobo", "smallie", "biggy"]
+library.update_books(query, list_of_books)
+'''
   
 

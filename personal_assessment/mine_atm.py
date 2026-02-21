@@ -28,4 +28,3 @@ def recharge(amount, recharge_type):
             print("insufficient balance")
 
 
-recharge()
